@@ -1,31 +1,30 @@
 #include<bits/stdc++.h>
 using namespace std;
-class coo{
-int ai;
-int bi;
-    public:
-    coo(int a=0,int b=0){
-        ai=a;
-        bi=b;
-    }
-coo operator +(coo r){
-    coo temp;
-    temp.ai=ai+r.ai;
-    temp.bi=bi+r.bi;
-    return temp;
-
-}
-void display(){
-    cout<<ai<< " "<<bi;
-}
-
-c1.operator+c2;
-
-    
+class Student {
+           int age;
+           public:
+           Student(int a){
+            age=a;
+           }
+        Student &operator++(){
+            age++;
+            return *this;
+        }
+        Student operator++(int used){
+            Student temp=*this;
+            age++;
+            return *this;
+        }
+      void display(){
+        cout<<age<<endl;
+      }
 };
-int main(){
-    coo s1(10,20),s2(20,30);
-    coo s3=s1+s2;
-    s3.display();
+   int main(){
+    Student s1(100);
+    Student s2(10);
+    Student s4=s2++;
+    Student s3=++s1;
+   s4.display();
+   s3.display();
 
-}
+   }
