@@ -6,39 +6,38 @@ class Student {
     int age;
 
 public:
-    // Constructor
     Student(string n = "NoName", int a = 0) {
         name = n;
         age = a;
     }
 
-    // Pre-increment: ++s
+    
     Student& operator++() {
         age++;
         return *this;
     }
 
-    // Post-increment: s++
+    
     Student operator++(int r) {
         Student temp = *this;
         age++;
         return temp;
     }
 
-    // Pre-decrement: --s
+
     Student& operator--() {
         age--;
         return *this;
     }
 
-    // Post-decrement: s--
+    
     Student operator--(int) {
         Student temp = *this;
         age--;
         return temp;
     }
 
-    // Display function
+    
     void show() {
         cout << "Name: " << name << ", Age: " << age << endl;
     }
@@ -50,19 +49,19 @@ int main() {
     cout << "Initial: ";
     s.show();
 
-    ++s;     // pre-increment
+    ++s;     
     cout << "After ++s: ";
     s.show();
 
-    s++;     // post-increment
+    s++;     
     cout << "After s++: ";
     s.show();
 
-    --s;     // pre-decrement
+    --s;     
     cout << "After --s: ";
     s.show();
 
-    s--;     // post-decrement
+    s--;    
     cout << "After s--: ";
     s.show();
 
