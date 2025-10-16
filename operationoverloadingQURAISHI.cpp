@@ -8,11 +8,11 @@ class Complex{
             real=r;
             imag=i;
           }
-          //with object+object;
+        
           Complex operator+(Complex r){
             return Complex(real+r.real,imag+r.imag);
           }
-        //with object and value ; 
+         
         Complex operator +(int val){
             return Complex (real+val,imag);
         }

@@ -47,7 +47,7 @@ public:
     }
 
     // Post-increment (m++)
-    Money operator++(int) {
+    Money operator++(int notused ) {
         Money temp = *this;
         amount++;
         return temp;
