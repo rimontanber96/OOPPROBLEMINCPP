@@ -49,11 +49,11 @@ int main() {
     cout << "Initial: ";
     s.show();
 
-    ++s;     
+    Student s2= ++s;     
     cout << "After ++s: ";
-    s.show();
+    s2.show();
 
-    s++;     
+     s++;     
     cout << "After s++: ";
     s.show();
 
