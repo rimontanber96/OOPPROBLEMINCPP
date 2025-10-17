@@ -39,7 +39,7 @@ public:
     }
 
     void display() {
-        cout << real << " + " << imag << "\n";
+        cout << real << "  " << imag << "\n";
     }
 };
 
